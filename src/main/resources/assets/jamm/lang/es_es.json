@@ -1,3 +1,6 @@
 {
-  "item.jamm.fluorite": "Fluorita"
+  "item.jamm.fluorite": "Fluorita",
+  "item.jamm.bluestone_dust": "Polvo de Piedrazul",
+
+  "itemGroup.Jamm": "Jamm"
 }

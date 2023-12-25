@@ -1,3 +1,6 @@
 {
-  "item.jamm.fluorite": "Fluorite"
+  "item.jamm.fluorite": "Fluorite",
+  "item.jamm.bluestone_dust": "Bluestone Dust",
+
+  "itemGroup.Jamm": "Jamm"
 }
