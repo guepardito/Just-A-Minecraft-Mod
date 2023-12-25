@@ -1,5 +1,6 @@
 package es.guepardito.jamm;
 
+import es.guepardito.jamm.block.JammBlocks;
 import es.guepardito.jamm.item.JammItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -33,6 +34,7 @@ public class Jamm
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         JammItems.register(eventBus);
+        JammBlocks.register(eventBus);
 
         eventBus.addListener(this::setup);
         // Register the enqueueIMC method for modloading

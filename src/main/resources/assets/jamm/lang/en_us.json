@@ -2,5 +2,7 @@
   "item.jamm.fluorite": "Fluorite",
   "item.jamm.bluestone_dust": "Bluestone Dust",
 
+  "block.jamm.bluestone_ore" : "Bluestone Ore",
+
   "itemGroup.Jamm": "Jamm"
 }
