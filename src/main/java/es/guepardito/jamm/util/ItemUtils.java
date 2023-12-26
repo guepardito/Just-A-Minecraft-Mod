@@ -1,4 +1,4 @@
-package es.guepardito.jamm.utils;
+package es.guepardito.jamm.util;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;

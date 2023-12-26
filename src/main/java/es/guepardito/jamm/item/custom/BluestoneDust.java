@@ -2,6 +2,7 @@ package es.guepardito.jamm.item.custom;
 
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.util.ITooltipFlag;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TranslationTextComponent;
@@ -10,7 +11,7 @@ import net.minecraft.world.World;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class BluestoneDust extends JammItem {
+public class BluestoneDust extends Item {
     public BluestoneDust(Properties properties) {
         super(properties);
     }

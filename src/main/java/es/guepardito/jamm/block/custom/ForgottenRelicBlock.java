@@ -1,5 +1,6 @@
 package es.guepardito.jamm.block.custom;
 
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -9,9 +10,9 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.world.World;
 
-import static es.guepardito.jamm.utils.ItemUtils.lightEntityOnFire;
+import static es.guepardito.jamm.util.ItemUtils.lightEntityOnFire;
 
-public class ForgottenRelicBlock  extends JammBlock {
+public class ForgottenRelicBlock  extends Block {
     public ForgottenRelicBlock(Properties properties) {
         super(properties);
     }

@@ -1,6 +1,8 @@
 package es.guepardito.jamm.block.custom;
 
-public class BluestoneOre extends JammBlock {
+import net.minecraft.block.Block;
+
+public class BluestoneOre extends Block {
     public BluestoneOre(Properties properties) {
         super(properties);
     }

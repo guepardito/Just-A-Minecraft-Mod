@@ -3,6 +3,7 @@ package es.guepardito.jamm.item.custom;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUseContext;
 import net.minecraft.potion.Effects;
@@ -14,9 +15,9 @@ import net.minecraft.world.World;
 import javax.annotation.Nullable;
 import java.util.List;
 
-import static es.guepardito.jamm.utils.ItemUtils.addPlayerEffect;
+import static es.guepardito.jamm.util.ItemUtils.addPlayerEffect;
 
-public class ForgottenRelic extends JammItem {
+public class ForgottenRelic extends Item {
     public ForgottenRelic(Properties properties) {
         super(properties);
     }
