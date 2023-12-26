@@ -1,6 +1,7 @@
 package es.guepardito.jamm.block;
 
 import es.guepardito.jamm.Jamm;
+import es.guepardito.jamm.block.custom.ForgottenRelicBlock;
 import es.guepardito.jamm.item.JammItemGroup;
 import es.guepardito.jamm.item.JammItems;
 import net.minecraft.block.AbstractBlock;
@@ -24,6 +25,12 @@ public class JammBlocks {
                     .harvestLevel(2)
                     .harvestTool(ToolType.PICKAXE).setRequiresTool()
                     .hardnessAndResistance(5f)));
+
+    public static final RegistryObject<Block> FORGOTTEN_RELIC_BLOCK = registerBlock("forgotten_relic_block",
+            () -> new ForgottenRelicBlock(AbstractBlock.Properties.create(Material.IRON)
+                    .harvestLevel(2)
+                    .harvestTool(ToolType.PICKAXE).setRequiresTool()
+                    .hardnessAndResistance(8f)));
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

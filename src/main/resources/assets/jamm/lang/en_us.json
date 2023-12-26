@@ -1,8 +1,12 @@
 {
-  "item.jamm.fluorite": "Fluorite",
   "item.jamm.bluestone_dust": "Bluestone Dust",
+  "item.jamm.forgotten_relic": "Forgotten Relic",
 
   "block.jamm.bluestone_ore" : "Bluestone Ore",
+  "block.jamm.forgotten_relic_block": "Forgotten Relic Block",
+
+  "tooltip.jamm.forgotten_relic": "Hold \u00A7eSHIFT\u00A7r for more information",
+  "tooltip.jamm.forgotten_relic_shift": "An old item used to bring protection a long time ago.\nSome people say that it lets you fly",
 
   "itemGroup.Jamm": "Jamm"
 }

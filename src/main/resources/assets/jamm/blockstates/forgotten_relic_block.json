@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model":  "jamm:block/forgotten_relic_block"
+    }
+  }
+}

@@ -1,5 +1,7 @@
 package es.guepardito.jamm.item.custom;
 
+import net.minecraft.client.gui.screen.Screen;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -8,7 +10,12 @@ import net.minecraft.potion.Effect;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
 import net.minecraft.util.ActionResultType;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
+
+import javax.annotation.Nullable;
+import java.util.List;
 
 public class ForgottenRelic extends Item {
     public ForgottenRelic(Properties properties) {
@@ -23,10 +30,22 @@ public class ForgottenRelic extends Item {
             PlayerEntity playerEntity = context.getPlayer();
 
             forgottenRelicRandEffect(playerEntity);
+
             stack.damageItem(1, playerEntity, playerEntity1 -> playerEntity1.sendBreakAnimation(context.getHand()));
         }
 
         return super.onItemUseFirst(stack, context);
+    }
+
+    @Override
+    public void addInformation(ItemStack stack, @Nullable World world, List<ITextComponent> toolTip, ITooltipFlag flag) {
+        if (Screen.hasShiftDown()) {
+            toolTip.add(new TranslationTextComponent("tooltip.jamm.forgotten_relic_shift"));
+        } else {
+            toolTip.add(new TranslationTextComponent("tooltip.jamm.forgotten_relic"));
+        }
+
+        super.addInformation(stack, world, toolTip, flag);
     }
 
     public static void forgottenRelicRandEffect(PlayerEntity playerEntity) {
@@ -49,8 +68,8 @@ public class ForgottenRelic extends Item {
         }
     }
 
-    public static void addPlayerEffectDuration(PlayerEntity player, Effect effect, int second) {
-        player.addPotionEffect(new EffectInstance(effect, second));
+    public static void addPlayerEffectDuration(PlayerEntity player, Effect effect, int seconds) {
+        player.addPotionEffect(new EffectInstance(effect, seconds));
     }
 
     public static void addPlayerEffect(PlayerEntity player, Effect effect) {

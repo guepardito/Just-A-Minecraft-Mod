@@ -1,8 +1,12 @@
 {
-  "item.jamm.fluorite": "Fluorita",
   "item.jamm.bluestone_dust": "Polvo de Piedrazul",
+  "item.jamm.forgotten_relic": "Reliquia Olvidada",
 
   "block.jamm.bluestone_ore": "Mena de Piedrazul",
+  "block.jamm.forgotten_relic_block": "Bloque de Reliquia Olvidada",
+
+  "tooltip.jamm.forgotten_relic": "Manten \u00A7eSHIFT\u00A7r para mas informacion",
+  "tooltip.jamm.forgotten_relic_shift": "Un artículo antiguo usado para brindar protección hace mucho tiempo. Algunas personas dicen que te permite volar.",
 
   "itemGroup.Jamm": "Jamm"
 }
