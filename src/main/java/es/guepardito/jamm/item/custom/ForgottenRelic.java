@@ -24,27 +24,33 @@ public class ForgottenRelic extends Item {
 
         if(!world.isRemote) {
             PlayerEntity playerEntity = context.getPlayer();
-            BlockState clickedBlock = world.getBlockState(context.getPos());
 
-            rightClickOnCertainBlockState(clickedBlock, playerEntity);
+            rightClick(playerEntity);
             stack.damageItem(1, playerEntity, playerEntity1 -> playerEntity1.sendBreakAnimation(context.getHand()));
         }
 
         return super.onItemUseFirst(stack, context);
     }
 
-    private void rightClickOnCertainBlockState(BlockState clickedBlock, PlayerEntity playerEntity) {
-        if (!playerEntity.isInvisible() && blockIsValidForInvisible(clickedBlock)) {
-            // make player invisible for 10 secs
-            doInvisibleEntity(playerEntity, 400);
+    private void rightClick(PlayerEntity playerEntity) {
+        switch (random.nextInt(5)) {
+            case 1:
+                addPlayerEffect(playerEntity, Effects.INVISIBILITY, 400);
+                break;
+            case 2:
+                addPlayerEffect(playerEntity, Effects.FIRE_RESISTANCE, 400);
+                break;
+            case 3:
+                addPlayerEffect(playerEntity, Effects.RESISTANCE, 400);
+                break;
+            case 4:
+                addPlayerEffect(playerEntity, Effects.ABSORPTION, 400);
+            default:
+                addPlayerEffect(playerEntity, Effects.LEVITATION, 400);
         }
     }
 
-    private boolean blockIsValidForInvisible(BlockState clickedBlock) {
-        return clickedBlock.getBlock() == Blocks.GRASS_BLOCK;
-    }
-
-    public static void doInvisibleEntity(PlayerEntity player, int second) {
-        player.addPotionEffect(new EffectInstance(Effects.INVISIBILITY, second));
+    public static void addPlayerEffect(PlayerEntity player, Effect effect, int second) {
+        player.addPotionEffect(new EffectInstance(effect, second));
     }
 }
