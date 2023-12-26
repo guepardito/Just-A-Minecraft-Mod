@@ -1,5 +1,8 @@
 package es.guepardito.jamm.item.custom;
 
+import es.guepardito.jamm.util.JammTags;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.PlayerEntity;
@@ -8,6 +11,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUseContext;
 import net.minecraft.potion.Effects;
 import net.minecraft.util.ActionResultType;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
@@ -30,6 +34,7 @@ public class ForgottenRelic extends Item {
             PlayerEntity playerEntity = context.getPlayer();
 
             forgottenRelicRandEffect(playerEntity);
+            destroyBlockIfClickable(world.getBlockState(context.getPos()), world, context.getPos());
 
             stack.damageItem(1, playerEntity, playerEntity1 -> playerEntity1.sendBreakAnimation(context.getHand()));
         }
@@ -65,6 +70,12 @@ public class ForgottenRelic extends Item {
             default:
                 addPlayerEffect(playerEntity, Effects.LEVITATION, 400);
                 break;
+        }
+    }
+
+    private void destroyBlockIfClickable(BlockState block, World world, BlockPos pos) {
+        if (block.isIn(JammTags.Blocks.FORGOTTEN_RELIC_CLICKABLE_BLOCKS)) {
+            world.destroyBlock(pos, true);
         }
     }
 }
