@@ -3,11 +3,8 @@ package es.guepardito.jamm.item.custom;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUseContext;
-import net.minecraft.potion.Effect;
-import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.util.text.ITextComponent;
@@ -17,7 +14,9 @@ import net.minecraft.world.World;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class ForgottenRelic extends Item {
+import static es.guepardito.jamm.utils.ItemUtils.addPlayerEffect;
+
+public class ForgottenRelic extends JammItem {
     public ForgottenRelic(Properties properties) {
         super(properties);
     }
@@ -48,31 +47,23 @@ public class ForgottenRelic extends Item {
         super.addInformation(stack, world, toolTip, flag);
     }
 
-    public static void forgottenRelicRandEffect(PlayerEntity playerEntity) {
+    private void forgottenRelicRandEffect(PlayerEntity playerEntity) {
         switch (random.nextInt(5)) {
             case 1:
-                addPlayerEffectDuration(playerEntity, Effects.INVISIBILITY, 400);
+                addPlayerEffect(playerEntity, Effects.INVISIBILITY, 400);
                 break;
             case 2:
-                addPlayerEffectDuration(playerEntity, Effects.FIRE_RESISTANCE, 400);
+                addPlayerEffect(playerEntity, Effects.FIRE_RESISTANCE, 400);
                 break;
             case 3:
-                addPlayerEffectDuration(playerEntity, Effects.RESISTANCE, 400);
+                addPlayerEffect(playerEntity, Effects.RESISTANCE, 400);
                 break;
             case 4:
                 addPlayerEffect(playerEntity, Effects.ABSORPTION);
                 break;
             default:
-                addPlayerEffectDuration(playerEntity, Effects.LEVITATION, 400);
+                addPlayerEffect(playerEntity, Effects.LEVITATION, 400);
                 break;
         }
-    }
-
-    public static void addPlayerEffectDuration(PlayerEntity player, Effect effect, int seconds) {
-        player.addPotionEffect(new EffectInstance(effect, seconds));
-    }
-
-    public static void addPlayerEffect(PlayerEntity player, Effect effect) {
-        player.addPotionEffect(new EffectInstance(effect));
     }
 }
