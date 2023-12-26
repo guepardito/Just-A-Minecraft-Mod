@@ -1,6 +1,7 @@
 package es.guepardito.jamm.block;
 
 import es.guepardito.jamm.Jamm;
+import es.guepardito.jamm.block.custom.BluestoneOre;
 import es.guepardito.jamm.block.custom.ForgottenRelicBlock;
 import es.guepardito.jamm.item.JammItemGroup;
 import es.guepardito.jamm.item.JammItems;
@@ -21,7 +22,7 @@ public class JammBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Jamm.MOD_ID);
 
     public static final RegistryObject<Block> BLUESTONE_ORE = registerBlock("bluestone_ore",
-            () -> new Block(AbstractBlock.Properties.create(Material.ROCK)
+            () -> new BluestoneOre(AbstractBlock.Properties.create(Material.ROCK)
                     .harvestLevel(2)
                     .harvestTool(ToolType.PICKAXE).setRequiresTool()
                     .hardnessAndResistance(5f)));

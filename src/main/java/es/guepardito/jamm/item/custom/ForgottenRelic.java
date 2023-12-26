@@ -39,9 +39,9 @@ public class ForgottenRelic extends JammItem {
     @Override
     public void addInformation(ItemStack stack, @Nullable World world, List<ITextComponent> toolTip, ITooltipFlag flag) {
         if (Screen.hasShiftDown()) {
-            toolTip.add(new TranslationTextComponent("tooltip.jamm.forgotten_relic_shift"));
-        } else {
             toolTip.add(new TranslationTextComponent("tooltip.jamm.forgotten_relic"));
+        } else {
+            toolTip.add(new TranslationTextComponent("tooltip.jamm.holdshift"));
         }
 
         super.addInformation(stack, world, toolTip, flag);

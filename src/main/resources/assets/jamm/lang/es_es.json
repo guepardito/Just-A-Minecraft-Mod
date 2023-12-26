@@ -5,8 +5,9 @@
   "block.jamm.bluestone_ore": "Mena de Piedrazul",
   "block.jamm.forgotten_relic_block": "Bloque de Reliquia Olvidada",
 
-  "tooltip.jamm.forgotten_relic": "Manten \u00A7eSHIFT\u00A7r para mas informacion",
-  "tooltip.jamm.forgotten_relic_shift": "Un artículo antiguo usado para brindar protección hace mucho tiempo. Algunas personas dicen que te permite volar.",
+  "tooltip.jamm.holdshift": "Manten \u00A7eSHIFT\u00A7r para mas informacion",
+  "tooltip.jamm.bluestone_dust": "Un elemento mágico que mejora herramientas. Su rareza intriga a los eruditos por sus misteriosos efectos",
+  "tooltip.jamm.forgotten_relic": "Un articulo antiguo usado para brindar protección hace mucho tiempo. Algunas personas dicen que te permite volar",
 
   "itemGroup.Jamm": "Jamm"
 }

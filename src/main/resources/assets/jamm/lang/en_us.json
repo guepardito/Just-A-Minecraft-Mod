@@ -5,8 +5,9 @@
   "block.jamm.bluestone_ore" : "Bluestone Ore",
   "block.jamm.forgotten_relic_block": "Forgotten Relic Block",
 
-  "tooltip.jamm.forgotten_relic": "Hold \u00A7eSHIFT\u00A7r for more information",
-  "tooltip.jamm.forgotten_relic_shift": "An old item used to bring protection a long time ago.\nSome people say that it lets you fly",
+  "tooltip.jamm.holdshift": "Hold \u00A7eSHIFT\u00A7r for more information",
+  "tooltip.jamm.bluestone_dust": "A magical element that enhances tools. Its rarity intrigues scholars due to its mysterious effects",
+  "tooltip.jamm.forgotten_relic": "An old item used to bring protection a long time ago. Some people say that it lets you fly",
 
   "itemGroup.Jamm": "Jamm"
 }

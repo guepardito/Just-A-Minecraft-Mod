@@ -12,8 +12,8 @@ import net.minecraft.world.World;
 import static es.guepardito.jamm.utils.ItemUtils.lightEntityOnFire;
 
 public class ForgottenRelicBlock  extends JammBlock {
-    public ForgottenRelicBlock(Properties p_i48440_1_) {
-        super(p_i48440_1_);
+    public ForgottenRelicBlock(Properties properties) {
+        super(properties);
     }
     @SuppressWarnings("deprecation")
     @Override
